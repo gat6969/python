@@ -1,20 +1,25 @@
-def calculate_factorial(number):
-    
-    factorial = 1
-    for i in range(1, number + 1):
-        factorial *= i
-    return factorial
+# 1. Create a tuple of 5 fruits
+fruits_tuple = ('apple', 'banana', 'cherry', 'mango', 'orange')
+print("Original tuple:", fruits_tuple)
 
-try:
-    
-    user_input = input("Enter a number to calculate its factorial: ")
-    number = int(user_input)
+# 2. Convert the tuple into a list and add a new fruit
+fruits_list = list(fruits_tuple)  # Convert tuple to list
+fruits_list.append('grape')  # Add a new fruit
+print("After adding a new fruit:", fruits_list)
 
-    if number < 0:
-        print("Factorial is not defined for negative numbers.")
-    else:
-        result = calculate_factorial(number)
-        print(f"The factorial of {number} is {result}.")
-        
-except ValueError:
-    print("Invalid input! Please enter a valid integer.")
+# 3. Create another list of berries and merge both lists
+berries = ['blueberry', 'strawberry', 'raspberry']
+merged_list = fruits_list + berries  # Merge both lists
+print("Merged list:", merged_list)
+
+# 4. Convert the updated list back into a tuple
+updated_tuple = tuple(merged_list)  # Convert list back to tuple
+print("Updated tuple:", updated_tuple)
+
+# 5. Print the tuple in sorted manner
+sorted_tuple = tuple(sorted(updated_tuple))  # Sort the tuple
+print("Sorted tuple:", sorted_tuple)
+
+# 6. Find the index of a particular fruit in the tuple
+index_of_mango = updated_tuple.index('mango')  # Find the index of 'mango'
+print("Index of 'mango' in the tuple:", index_of_mango)
